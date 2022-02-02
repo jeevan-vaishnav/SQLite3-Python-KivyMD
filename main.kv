@@ -1,0 +1,30 @@
+MDFloatLayout:
+    
+    MDBoxLayout:
+        orientation: 'vertical'
+        size:root.width,root.height
+
+
+        Label:
+            id:word_label
+            text: 'Enter A Name'
+            text_size:self.size
+            halign:'center'
+            valign:'middle'
+            font_size:32
+            # pos_hint:{'center_x':.5,"center_y":.5}
+
+        TextInput:
+            id:word_input
+            multiline:False
+            size_hint:(1,.5)
+        Button:
+            size_hint:(1,.5)
+            font_size:32
+            text:'Submit'
+            on_release:app.fSubmit()
+        Button:
+            size_hint:(1,.5)
+            font_size:32
+            text:'Show'
+            on_release:app.fShowDetails()
